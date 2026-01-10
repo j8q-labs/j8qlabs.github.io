@@ -328,6 +328,15 @@
             margin-bottom: 24px;
         }
 
+        .substack-embed {
+            display: flex;
+            justify-content: center;
+        }
+
+        .substack-embed iframe {
+            max-width: 100%;
+        }
+
         /* For Who */
         .for-who ul {
             list-style: none;
@@ -567,9 +576,9 @@
                 and building AI infrastructure in regulated enterprise.<br>
                 No spam. No fluff. Just what works.
             </p>
-            <a href="https://j8qlabs.substack.com/subscribe" class="cta-substack" target="_blank">
-                Subscribe Free
-            </a>
+            <div class="substack-embed">
+                <iframe src="https://j8qlabs.substack.com/embed" width="480" height="150" style="border:1px solid #333; background:#1a2332; border-radius: 8px;" frameborder="0" scrolling="no"></iframe>
+            </div>
         </div>
     </section>
 
