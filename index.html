@@ -18,9 +18,9 @@
 
     <style>
         :root {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #111111;
-            --bg-tertiary: #1a1a1a;
+            --bg-primary: #151c28;
+            --bg-secondary: #1a2332;
+            --bg-tertiary: #222d3d;
             --text-primary: #fafafa;
             --text-secondary: #a1a1a1;
             --text-muted: #6b6b6b;
@@ -205,6 +205,73 @@
             font-size: 0.95rem;
         }
 
+        .pillar {
+            text-align: center;
+        }
+
+        .cta-substack {
+            display: inline-block;
+            margin-top: 16px;
+            background: #ff6719;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .cta-contact {
+            display: inline-block;
+            margin-top: 16px;
+            background: #22c55e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .cta-contact:hover {
+            background: #16a34a;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            background: #24292e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .github-link:hover {
+            background: #3a3f44;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .github-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .cta-substack:hover {
+            background: #e55a14;
+            color: white;
+            transform: translateY(-1px);
+        }
+
         /* Project Card */
         .project-card {
             background: var(--bg-secondary);
@@ -217,6 +284,17 @@
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 8px;
+        }
+
+        .project-link {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .project-link:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
         }
 
         .project-card .tagline {
@@ -363,10 +441,16 @@
         .footer-links a {
             color: var(--text-secondary);
             font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
         }
 
         .footer-links a:hover {
             color: var(--text-primary);
+        }
+
+        .footer-links svg {
+            transition: color 0.2s;
         }
 
         .copyright {
@@ -397,7 +481,7 @@
             <a href="/" class="logo"><img src="logo.png" alt="j8q labs"></a>
             <span class="nav-brand">j8q labs</span>
             <ul class="nav-links">
-                <li><a href="https://github.com/j8q-labs" target="_blank">Projects</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="https://j8qlabs.substack.com" target="_blank">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -412,7 +496,7 @@
                 Tools, insights, and consulting for hybrid ML platforms —
                 from someone who's built them in regulated enterprise.
             </p>
-            <a href="https://j8qlabs.substack.com" class="cta-button" target="_blank">
+            <a href="https://j8qlabs.substack.com/subscribe" class="cta-substack" target="_blank">
                 Subscribe to the Newsletter
             </a>
         </div>
@@ -423,16 +507,22 @@
         <div class="container">
             <div class="pillars">
                 <div class="pillar">
-                    <h3>Write</h3>
+                    <h3>Newsletter</h3>
                     <p>Practical insights on ML platforms and GPU infrastructure.</p>
+                    <a href="https://j8qlabs.substack.com/subscribe" class="cta-substack" target="_blank">Subscribe</a>
                 </div>
                 <div class="pillar">
-                    <h3>Build</h3>
+                    <h3>Contributions</h3>
                     <p>Tools for ML platform teams — starting with ResearcherHub.</p>
+                    <a href="https://github.com/orgs/j8q-labs/repositories" class="github-link" target="_blank">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        GitHub
+                    </a>
                 </div>
                 <div class="pillar">
-                    <h3>Consult</h3>
+                    <h3>Consultations</h3>
                     <p>Hands-on help deploying hybrid AI infrastructure.</p>
+                    <a href="#contact" class="cta-contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -443,7 +533,7 @@
         <div class="container">
             <h2>What We're Building</h2>
             <div class="project-card">
-                <h3>ResearcherHub</h3>
+                <h3><a href="https://github.com/j8q-labs/researcherhub" target="_blank" class="project-link">ResearcherHub</a></h3>
                 <p class="tagline">The missing UI for GPU orchestration.</p>
                 <p>
                     Self-service portal for ML researchers — job submission,
@@ -477,7 +567,7 @@
                 and building AI infrastructure in regulated enterprise.<br>
                 No spam. No fluff. Just what works.
             </p>
-            <a href="https://j8qlabs.substack.com" class="cta-button" target="_blank">
+            <a href="https://j8qlabs.substack.com/subscribe" class="cta-substack" target="_blank">
                 Subscribe Free
             </a>
         </div>
@@ -533,9 +623,15 @@
             <div class="footer-brand">j8q labs</div>
             <div class="footer-links">
                 <a href="https://j8qlabs.substack.com" target="_blank">Newsletter</a>
-                <a href="https://twitter.com/j8q" target="_blank">Twitter</a>
-                <a href="https://github.com/j8q-labs" target="_blank">GitHub</a>
-                <a href="mailto:hello@j8q.dev">hello@j8q.dev</a>
+                <a href="https://twitter.com/j8q" target="_blank" aria-label="Twitter">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://github.com/orgs/j8q-labs/repositories" target="_blank" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="mailto:hello@j8q.dev" aria-label="Email">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+                </a>
             </div>
             <p class="copyright">© 2025 j8q labs</p>
         </div>
