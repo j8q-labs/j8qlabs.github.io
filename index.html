@@ -7,7 +7,9 @@
     <meta name="description" content="Tools, insights, and consulting for hybrid ML platforms — from someone who's built them in regulated enterprise.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,10 +76,31 @@
             align-items: center;
         }
 
+        .nav-brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        nav .container {
+            position: relative;
+        }
+
         .logo {
+            display: flex;
+            align-items: center;
             font-size: 1.25rem;
             font-weight: 700;
             color: var(--text-primary);
+        }
+
+        .logo img {
+            height: 48px;
+            width: auto;
         }
 
         .nav-links {
@@ -371,10 +394,11 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="/" class="logo">j8q labs</a>
+            <a href="/" class="logo"><img src="logo.png" alt="j8q labs"></a>
+            <span class="nav-brand">j8q labs</span>
             <ul class="nav-links">
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="https://j8q.substack.com" target="_blank">Blog</a></li>
+                <li><a href="https://github.com/j8q-labs" target="_blank">Projects</a></li>
+                <li><a href="https://j8qlabs.substack.com" target="_blank">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -388,7 +412,7 @@
                 Tools, insights, and consulting for hybrid ML platforms —
                 from someone who's built them in regulated enterprise.
             </p>
-            <a href="https://j8q.substack.com" class="cta-button" target="_blank">
+            <a href="https://j8qlabs.substack.com" class="cta-button" target="_blank">
                 Subscribe to the Newsletter
             </a>
         </div>
@@ -453,7 +477,7 @@
                 and building AI infrastructure in regulated enterprise.<br>
                 No spam. No fluff. Just what works.
             </p>
-            <a href="https://j8q.substack.com" class="cta-button" target="_blank">
+            <a href="https://j8qlabs.substack.com" class="cta-button" target="_blank">
                 Subscribe Free
             </a>
         </div>
@@ -508,9 +532,9 @@
         <div class="container">
             <div class="footer-brand">j8q labs</div>
             <div class="footer-links">
-                <a href="https://j8q.substack.com" target="_blank">Newsletter</a>
+                <a href="https://j8qlabs.substack.com" target="_blank">Newsletter</a>
                 <a href="https://twitter.com/j8q" target="_blank">Twitter</a>
-                <a href="https://github.com/j8qlabs" target="_blank">GitHub</a>
+                <a href="https://github.com/j8q-labs" target="_blank">GitHub</a>
                 <a href="mailto:hello@j8q.dev">hello@j8q.dev</a>
             </div>
             <p class="copyright">© 2025 j8q labs</p>
