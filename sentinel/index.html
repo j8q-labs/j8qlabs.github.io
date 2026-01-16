@@ -154,6 +154,33 @@
             transform: translateY(-1px);
         }
 
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 1px solid #3d4f5f;
+            transition: all 0.2s;
+        }
+
+        .cta-secondary:hover {
+            color: white;
+            background: var(--bg-tertiary);
+            border-color: #5a6f7f;
+            transform: translateY(-1px);
+        }
+
         /* Sections */
         section {
             padding: 64px 0;
@@ -436,7 +463,10 @@
                 approval workflows, and audit trails that satisfy regulators
                 without slowing down your team.
             </p>
-            <a href="#contact" class="cta-button">Let's Talk</a>
+            <div class="hero-ctas">
+                <a href="#contact" class="cta-button">Let's Talk</a>
+                <a href="../reports/ml-governance-whitepaper.html" class="cta-secondary">Read the Whitepaper</a>
+            </div>
         </div>
     </header>
 
